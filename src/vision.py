@@ -13,9 +13,21 @@ client = genai.Client(
 MODEL = "gemini-3.1-flash-lite"
 
 class VisionProcessor:
-    def __init__(self):
-        self.image_folder = "data/extracted/images"
-        self.table_folder = "data/extracted/tables"
+    def __init__(
+            self,
+            image_folder="data/extracted/images",
+            table_folder="data/extracted/tables",
+            chunk_folder="data/extracted/chunks"
+        ):
+
+        self.image_folder = image_folder
+        self.table_folder = table_folder
+        self.chunk_folder = chunk_folder
+
+        # Build directory scaffolding safely
+        os.makedirs(self.image_folder, exist_ok=True)
+        os.makedirs(self.table_folder, exist_ok=True)
+        os.makedirs(self.chunk_folder, exist_ok=True)
 
         self.documents = []
 

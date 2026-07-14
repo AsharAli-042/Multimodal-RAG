@@ -1,3 +1,0 @@
-ated attentions from just the word ‘its’ for attention heads 5
-and 6. Note that the attentions are very sharp for this word.
-14
