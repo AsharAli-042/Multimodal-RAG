@@ -3,6 +3,9 @@ import json
 import fitz  # PyMuPDF
 from PIL import Image
 
+from chunker import TextChunker
+from extract_tables import TableExtractor
+
 class PDFExtractor:
     """
     Extracts multimodal content from a research paper.
@@ -179,3 +182,13 @@ if __name__ == "__main__":
         "data/Attention_Is_All_You_Need.pdf"
     )
     extractor.run()
+
+    print("\nCreating semantic chunks...")
+    chunker = TextChunker()
+    chunker.process()
+
+    print("\nExtracting tables...")
+    tables = TableExtractor(
+        "data/Attention_Is_All_You_Need.pdf"
+    )
+    tables.extract()

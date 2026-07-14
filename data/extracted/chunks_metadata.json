@@ -1,0 +1,404 @@
+[
+    {
+        "chunk_id": 1,
+        "page": 1,
+        "file": "data/extracted/chunks\\chunk_1.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 2,
+        "page": 1,
+        "file": "data/extracted/chunks\\chunk_2.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 3,
+        "page": 1,
+        "file": "data/extracted/chunks\\chunk_3.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 4,
+        "page": 1,
+        "file": "data/extracted/chunks\\chunk_4.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 5,
+        "page": 1,
+        "file": "data/extracted/chunks\\chunk_5.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 6,
+        "page": 10,
+        "file": "data/extracted/chunks\\chunk_6.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 7,
+        "page": 10,
+        "file": "data/extracted/chunks\\chunk_7.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 8,
+        "page": 10,
+        "file": "data/extracted/chunks\\chunk_8.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 9,
+        "page": 10,
+        "file": "data/extracted/chunks\\chunk_9.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 10,
+        "page": 10,
+        "file": "data/extracted/chunks\\chunk_10.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 11,
+        "page": 11,
+        "file": "data/extracted/chunks\\chunk_11.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 12,
+        "page": 11,
+        "file": "data/extracted/chunks\\chunk_12.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 13,
+        "page": 11,
+        "file": "data/extracted/chunks\\chunk_13.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 14,
+        "page": 11,
+        "file": "data/extracted/chunks\\chunk_14.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 15,
+        "page": 11,
+        "file": "data/extracted/chunks\\chunk_15.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 16,
+        "page": 12,
+        "file": "data/extracted/chunks\\chunk_16.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 17,
+        "page": 12,
+        "file": "data/extracted/chunks\\chunk_17.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 18,
+        "page": 12,
+        "file": "data/extracted/chunks\\chunk_18.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 19,
+        "page": 12,
+        "file": "data/extracted/chunks\\chunk_19.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 20,
+        "page": 12,
+        "file": "data/extracted/chunks\\chunk_20.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 21,
+        "page": 13,
+        "file": "data/extracted/chunks\\chunk_21.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 22,
+        "page": 13,
+        "file": "data/extracted/chunks\\chunk_22.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 23,
+        "page": 14,
+        "file": "data/extracted/chunks\\chunk_23.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 24,
+        "page": 14,
+        "file": "data/extracted/chunks\\chunk_24.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 25,
+        "page": 15,
+        "file": "data/extracted/chunks\\chunk_25.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 26,
+        "page": 15,
+        "file": "data/extracted/chunks\\chunk_26.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 27,
+        "page": 2,
+        "file": "data/extracted/chunks\\chunk_27.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 28,
+        "page": 2,
+        "file": "data/extracted/chunks\\chunk_28.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 29,
+        "page": 2,
+        "file": "data/extracted/chunks\\chunk_29.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 30,
+        "page": 2,
+        "file": "data/extracted/chunks\\chunk_30.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 31,
+        "page": 2,
+        "file": "data/extracted/chunks\\chunk_31.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 32,
+        "page": 2,
+        "file": "data/extracted/chunks\\chunk_32.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 33,
+        "page": 2,
+        "file": "data/extracted/chunks\\chunk_33.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 34,
+        "page": 3,
+        "file": "data/extracted/chunks\\chunk_34.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 35,
+        "page": 3,
+        "file": "data/extracted/chunks\\chunk_35.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 36,
+        "page": 3,
+        "file": "data/extracted/chunks\\chunk_36.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 37,
+        "page": 4,
+        "file": "data/extracted/chunks\\chunk_37.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 38,
+        "page": 4,
+        "file": "data/extracted/chunks\\chunk_38.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 39,
+        "page": 4,
+        "file": "data/extracted/chunks\\chunk_39.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 40,
+        "page": 4,
+        "file": "data/extracted/chunks\\chunk_40.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 41,
+        "page": 5,
+        "file": "data/extracted/chunks\\chunk_41.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 42,
+        "page": 5,
+        "file": "data/extracted/chunks\\chunk_42.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 43,
+        "page": 5,
+        "file": "data/extracted/chunks\\chunk_43.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 44,
+        "page": 5,
+        "file": "data/extracted/chunks\\chunk_44.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 45,
+        "page": 5,
+        "file": "data/extracted/chunks\\chunk_45.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 46,
+        "page": 6,
+        "file": "data/extracted/chunks\\chunk_46.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 47,
+        "page": 6,
+        "file": "data/extracted/chunks\\chunk_47.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 48,
+        "page": 6,
+        "file": "data/extracted/chunks\\chunk_48.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 49,
+        "page": 6,
+        "file": "data/extracted/chunks\\chunk_49.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 50,
+        "page": 6,
+        "file": "data/extracted/chunks\\chunk_50.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 51,
+        "page": 6,
+        "file": "data/extracted/chunks\\chunk_51.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 52,
+        "page": 7,
+        "file": "data/extracted/chunks\\chunk_52.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 53,
+        "page": 7,
+        "file": "data/extracted/chunks\\chunk_53.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 54,
+        "page": 7,
+        "file": "data/extracted/chunks\\chunk_54.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 55,
+        "page": 7,
+        "file": "data/extracted/chunks\\chunk_55.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 56,
+        "page": 7,
+        "file": "data/extracted/chunks\\chunk_56.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 57,
+        "page": 7,
+        "file": "data/extracted/chunks\\chunk_57.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 58,
+        "page": 8,
+        "file": "data/extracted/chunks\\chunk_58.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 59,
+        "page": 8,
+        "file": "data/extracted/chunks\\chunk_59.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 60,
+        "page": 8,
+        "file": "data/extracted/chunks\\chunk_60.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 61,
+        "page": 8,
+        "file": "data/extracted/chunks\\chunk_61.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 62,
+        "page": 8,
+        "file": "data/extracted/chunks\\chunk_62.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 63,
+        "page": 9,
+        "file": "data/extracted/chunks\\chunk_63.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 64,
+        "page": 9,
+        "file": "data/extracted/chunks\\chunk_64.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 65,
+        "page": 9,
+        "file": "data/extracted/chunks\\chunk_65.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 66,
+        "page": 9,
+        "file": "data/extracted/chunks\\chunk_66.txt",
+        "type": "text"
+    },
+    {
+        "chunk_id": 67,
+        "page": 9,
+        "file": "data/extracted/chunks\\chunk_67.txt",
+        "type": "text"
+    }
+]

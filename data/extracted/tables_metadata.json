@@ -1,0 +1,38 @@
+[
+    {
+        "table_id": 1,
+        "page": 9,
+        "file": "data/extracted/tables\\table_1.json",
+        "type": "table"
+    },
+    {
+        "table_id": 2,
+        "page": 10,
+        "file": "data/extracted/tables\\table_2.json",
+        "type": "table"
+    },
+    {
+        "table_id": 3,
+        "page": 13,
+        "file": "data/extracted/tables\\table_3.json",
+        "type": "table"
+    },
+    {
+        "table_id": 4,
+        "page": 13,
+        "file": "data/extracted/tables\\table_4.json",
+        "type": "table"
+    },
+    {
+        "table_id": 5,
+        "page": 14,
+        "file": "data/extracted/tables\\table_5.json",
+        "type": "table"
+    },
+    {
+        "table_id": 6,
+        "page": 15,
+        "file": "data/extracted/tables\\table_6.json",
+        "type": "table"
+    }
+]
