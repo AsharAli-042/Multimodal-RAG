@@ -22,6 +22,7 @@ class TextChunker:
         self.overlap = overlap
 
         os.makedirs(output_folder, exist_ok=True)
+        os.makedirs(text_folder, exist_ok=True)
         self.chunk_metadata = []
 
     def chunk_text(self, text):
