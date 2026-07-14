@@ -1,3 +1,0 @@
-from two different heads from the encoder self-attention
-at layer 5 of 6. The heads clearly learned to perform different tasks.
-15
