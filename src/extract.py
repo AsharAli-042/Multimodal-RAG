@@ -106,7 +106,6 @@ class PDFExtractor:
         )
 
     """ IMAGE EXTRACTION """
-    
     def extract_images(self):
         print("=" * 60)
         print("Extracting Images")
@@ -191,4 +190,8 @@ if __name__ == "__main__":
     tables = TableExtractor(
         "data/Attention_Is_All_You_Need.pdf"
     )
-    tables.extract()
+
+    table_metadata = tables.extract()
+
+    with open("data/extracted/tables_metadata.json","w",encoding="utf-8") as f:
+        json.dump(table_metadata, f, indent=4)
