@@ -1,0 +1,91 @@
+{
+    "pages": 15,
+    "text_chunks": [
+        {
+            "page": 1,
+            "file": "data/extracted\\text\\page_1.txt"
+        },
+        {
+            "page": 2,
+            "file": "data/extracted\\text\\page_2.txt"
+        },
+        {
+            "page": 3,
+            "file": "data/extracted\\text\\page_3.txt"
+        },
+        {
+            "page": 4,
+            "file": "data/extracted\\text\\page_4.txt"
+        },
+        {
+            "page": 5,
+            "file": "data/extracted\\text\\page_5.txt"
+        },
+        {
+            "page": 6,
+            "file": "data/extracted\\text\\page_6.txt"
+        },
+        {
+            "page": 7,
+            "file": "data/extracted\\text\\page_7.txt"
+        },
+        {
+            "page": 8,
+            "file": "data/extracted\\text\\page_8.txt"
+        },
+        {
+            "page": 9,
+            "file": "data/extracted\\text\\page_9.txt"
+        },
+        {
+            "page": 10,
+            "file": "data/extracted\\text\\page_10.txt"
+        },
+        {
+            "page": 11,
+            "file": "data/extracted\\text\\page_11.txt"
+        },
+        {
+            "page": 12,
+            "file": "data/extracted\\text\\page_12.txt"
+        },
+        {
+            "page": 13,
+            "file": "data/extracted\\text\\page_13.txt"
+        },
+        {
+            "page": 14,
+            "file": "data/extracted\\text\\page_14.txt"
+        },
+        {
+            "page": 15,
+            "file": "data/extracted\\text\\page_15.txt"
+        }
+    ],
+    "images": [
+        {
+            "page": 3,
+            "file": "data/extracted\\images\\figure_1.png"
+        },
+        {
+            "page": 4,
+            "file": "data/extracted\\images\\figure_2.png"
+        },
+        {
+            "page": 4,
+            "file": "data/extracted\\images\\figure_3.png"
+        }
+    ],
+    "headings": [
+        {
+            "page": 1,
+            "text": "Attention Is All You Need",
+            "font_size": 17.22
+        },
+        {
+            "page": 1,
+            "text": "arXiv:1706.03762v7  [cs.CL]  2 Aug 2023",
+            "font_size": 20.0
+        }
+    ]
+}
