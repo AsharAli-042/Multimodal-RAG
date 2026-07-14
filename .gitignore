@@ -172,3 +172,15 @@ poetry.toml
 pyrightconfig.json
 
 data/extracted/
+
+# 1. Create empty placeholder files in your target directories
+touch data/extracted/chunks/.gitkeep
+touch data/extracted/images/.gitkeep
+touch data/extracted/tables/.gitkeep
+touch data/extracted/text/.gitkeep
+
+# 2. Force Git to track ONLY these tiny placeholder files
+git add -f data/extracted/chunks/.gitkeep
+git add -f data/extracted/images/.gitkeep
+git add -f data/extracted/tables/.gitkeep
+git add -f data/extracted/text/.gitkeep
