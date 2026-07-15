@@ -2,9 +2,7 @@ import subprocess
 import sys
 
 steps = [
-    "src/extract_text.py",
-    "src/extract_images.py",
-    "src/extract_tables.py",
+    "src/extract.py",
     "src/vision.py",
     "src/embed.py",
     "src/vector_store.py",

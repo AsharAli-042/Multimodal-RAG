@@ -39,7 +39,10 @@ class VisionProcessor:
         if not os.path.exists(self.image_folder):
             return
 
-        images = sorted(os.listdir(self.image_folder))
+        images = sorted(
+            image for image in os.listdir(self.image_folder)
+            if image.lower().endswith((".png", ".jpg", ".jpeg", ".bmp", ".webp"))
+        )
 
         for image_name in images:
             path = os.path.join(
@@ -69,7 +72,11 @@ class VisionProcessor:
                 ]
             )
 
-            description = response.text.strip()
+            if response.text:
+                description = response.text.strip()
+            else:
+                description = "Gemini could not generate a description."
+
             print(f"{image_name} processed.")
             self.documents.append(
                 {
@@ -87,7 +94,10 @@ class VisionProcessor:
         if not os.path.exists(self.table_folder):
             return
 
-        tables = sorted(os.listdir(self.table_folder))
+        tables = sorted(
+            table for table in os.listdir(self.table_folder)
+            if table.lower().endswith((".png", ".jpg", ".jpeg", ".bmp", ".webp"))
+        )
 
         for table_name in tables:
             path = os.path.join(
@@ -137,7 +147,10 @@ class VisionProcessor:
         print("=" * 60)
 
         chunk_folder = "data/extracted/chunks"
-        files = sorted(os.listdir(chunk_folder))
+        files = sorted(
+            file for file in os.listdir(chunk_folder)
+            if file.startswith("chunk_") and file.endswith(".txt")
+        )
 
         for file in files:
             path = os.path.join(
@@ -155,7 +168,7 @@ class VisionProcessor:
                     "content": text
                 }
             )
-        print(f"Loaded {len(files)} chunks.")
+        print(f"Loaded {len(self.documents)} text chunks.")
 
     def save(self):
         output = "data/extracted/documents.json"

@@ -1,35 +1,107 @@
 # Multimodal RAG on *Attention Is All You Need*
 
-A Multimodal Retrieval-Augmented Generation (RAG) system built using Google's Gemini API. This project extracts textual and visual information from the **Attention Is All You Need** research paper, embeds all extracted content into a shared vector space, retrieves the most relevant information for a user query, and generates grounded answers using Gemini.
+A **Multimodal Retrieval-Augmented Generation (RAG)** system built with **Google Gemini** that performs grounded question answering over the **Attention Is All You Need** research paper.
 
-The implementation demonstrates retrieval across multiple modalities, including text, headings, tables, and figures.
+The pipeline extracts textual and visual information from the paper, understands figures and tables using Gemini Vision, embeds every modality into a shared vector space, retrieves the most relevant context for a query, and generates answers grounded only in the retrieved information.
 
 ---
 
-# Features
+## Features
 
 - Extracts body text from the research paper
-- Detects and stores document headings
-- Extracts figures and diagrams from the PDF
+- Detects document headings
+- Extracts figures and diagrams
 - Extracts tables from the PDF
-- Uses Gemini Vision to understand figures and tables
-- Generates embeddings for all extracted content
-- Stores embeddings inside a FAISS vector database
-- Retrieves the most relevant information for a query
-- Produces grounded answers using Gemini
+- Uses Gemini Vision to understand visual content
+- Generates embeddings for text, headings, figures, and tables
+- Stores embeddings in a FAISS vector database
+- Retrieves relevant context using semantic similarity search
+- Generates grounded answers with Gemini
 - Logs every query, retrieved context, and generated answer
 
 ---
 
-# Requirements
+## Architecture
 
-- Python 3.10 or newer
-- A Google Gemini API key
-- Internet connection (required for Gemini API)
+```text
+                  Attention_Is_All_You_Need.pdf
+                               │
+                               ▼
+                         extract.py
+                               │
+          ┌────────────┬──────────────┬─────────────┐
+          ▼            ▼              ▼             ▼
+     Text Chunks    Headings       Figures       Tables
+          │            │              │             │
+          └──────┬─────┴──────────────┴─────────────┘
+                 ▼
+             vision.py
+      (Describe Figures & Tables)
+                 │
+                 ▼
+              embed.py
+                 │
+                 ▼
+          vector_store.py
+             (FAISS Index)
+                 │
+                 ▼
+               rag.py
+      Query → Retrieve → Gemini → Answer
+```
+
+The project follows a complete **Multimodal RAG pipeline**. The research paper is first processed to extract textual and visual content. Figures and tables are interpreted using Gemini Vision, while text is chunked for semantic retrieval. All extracted information is embedded into a shared vector space and indexed using FAISS. During inference, the most relevant context is retrieved and supplied to Gemini to generate grounded responses.
 
 ---
 
-# Installation
+## Project Structure
+
+```text
+┣ 📂data
+┃ ┣ 📂extracted
+┃ ┃ ┣ 📂chunks
+┃ ┃ ┣ 📂images
+┃ ┃ ┣ 📂tables
+┃ ┃ ┗ 📂text
+┃ ┗ 📜Attention_Is_All_You_Need.pdf
+┣ 📂output
+┃ ┣ 📂index
+┃ ┣ 📂results
+┃ ┣ 📜index.faiss
+┃ ┗ 📜metadata.pkl
+┣ 📂src
+┃ ┣ 📜chunker.py
+┃ ┣ 📜embed.py
+┃ ┣ 📜extract.py
+┃ ┣ 📜extract_tables.py
+┃ ┣ 📜rag.py
+┃ ┣ 📜vector_store.py
+┃ ┗ 📜vision.py
+┣ 📜app.py
+┣ 📜requirements.txt
+┣ 📜README.md
+┣ 📜.gitignore
+┗ 📜.env
+```
+
+---
+
+## Source Files
+
+| File | Purpose |
+|------|---------|
+| **extract.py** | Extracts body text, headings, figures, and metadata from the research paper. |
+| **chunker.py** | Splits extracted text into overlapping semantic chunks suitable for embedding. |
+| **extract_tables.py** | Detects and extracts tables from the PDF as images. |
+| **vision.py** | Uses Gemini Vision to generate descriptions for figures and tables. |
+| **embed.py** | Generates Gemini embeddings for every extracted document and stores them for indexing. |
+| **vector_store.py** | Builds and saves the FAISS vector index used for semantic retrieval. |
+| **rag.py** | Retrieves relevant context from FAISS and generates grounded answers using Gemini. |
+| **app.py** | Runs the complete pipeline with a single command. |
+
+---
+
+## Installation
 
 Clone the repository.
 
@@ -53,7 +125,23 @@ pip install -r requirements.txt
 
 ---
 
-# Environment Variables
+## Dataset
+
+Download the original research paper:
+
+**Attention Is All You Need**
+
+Rename the downloaded file as:
+
+```text
+Attention_Is_All_You_Need.pdf
+```
+
+Place the PDF inside the **data/** directory.
+
+---
+
+## Environment Variables
 
 Create a `.env` file in the project root.
 
@@ -61,72 +149,86 @@ Create a `.env` file in the project root.
 GEMINI_API_KEY=YOUR_API_KEY
 ```
 
-Do **not** commit your `.env` file to GitHub.
+Never commit your API key or `.env` file to version control.
 
 ---
 
-# Dataset
+## Running the Project
 
-Download the original paper:
-
-**Attention Is All You Need**
-
-Place it inside the `data` directory.
-
----
-
-# Project Structure
-
-```
-┣ 📂data
- ┃ ┣ 📂extracted
- ┃ ┗ 📜Attention_is_all_you_need.pdf
- ┣ 📂output
- ┣ 📂src
- ┃ ┣ 📜chunker.py
- ┃ ┣ 📜embed.py
- ┃ ┣ 📜extract.py
- ┃ ┣ 📜extract_tables.py
- ┃ ┣ 📜rag.py
- ┃ ┣ 📜vector_store.py
- ┃ ┗ 📜vision.py
- ┣ 📜.env
- ┣ 📜.gitignore
- ┣ 📜app.py
- ┣ 📜README.md
- ┗ 📜requirements.txt
-```
-
----
-
-# Running the Project
-
-Run the complete pipeline using:
+Execute the entire pipeline using:
 
 ```bash
 python app.py
 ```
 
-The pipeline performs the following steps automatically:
+The wrapper script performs the following steps automatically:
 
-1. Extract text, headings, and images from the PDF
-2. Extract tables
-3. Generate descriptions for figures and tables using Gemini Vision
-4. Generate embeddings for all extracted content
-5. Build the FAISS vector database
-6. Execute sample queries through the RAG pipeline
+1. Extract text, headings, figures, and metadata
+2. Extract tables from the PDF
+3. Generate Gemini Vision descriptions for figures and tables
+4. Generate embeddings for every extracted document
+5. Build the FAISS vector index
+6. Execute the Multimodal RAG pipeline
 
 ---
 
-# Output
+## Output
 
-The project generates:
+Running the project generates:
 
-- Extracted text files
+- Extracted page text
+- Semantic text chunks
 - Extracted figures
 - Extracted tables
-- Structured metadata
-- Vision-generated descriptions
+- Vision-generated figure descriptions
+- Vision-generated table descriptions
+- Document metadata
 - Embedding vectors
 - FAISS vector index
-- Query logs containing retrieved context and generated answers
+- Query logs containing:
+  - User query
+  - Retrieved context
+  - Generated answer
+
+---
+
+## Example Workflow
+
+```text
+Research Paper
+      │
+      ▼
+Extraction
+      │
+      ▼
+Vision Understanding
+      │
+      ▼
+Embedding Generation
+      │
+      ▼
+FAISS Vector Store
+      │
+      ▼
+User Query
+      │
+      ▼
+Semantic Retrieval
+      │
+      ▼
+Gemini
+      │
+      ▼
+Grounded Answer
+```
+
+---
+
+## Future Improvements
+
+- Hybrid retrieval (semantic + keyword search)
+- Better table parsing with structured extraction
+- Cross-modal retrieval ranking
+- Web interface using Streamlit or Gradio
+- Support for multiple research papers
+- Metadata-aware filtering during retrieval

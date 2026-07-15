@@ -38,7 +38,11 @@ class TextChunker:
         return chunks
 
     def process(self):
-        files = sorted(os.listdir(self.text_folder))
+        files = sorted(
+            file
+            for file in os.listdir(self.text_folder)
+            if file.startswith("page_") and file.endswith(".txt")
+        )
         chunk_id = 1
 
         for filename in files:
@@ -47,7 +51,11 @@ class TextChunker:
                 text = f.read()
 
             chunks = self.chunk_text(text)
-            page = int(filename.split("_")[1].split(".")[0])
+            try:
+                page = int(filename.replace("page_", "").replace(".txt", ""))
+            except ValueError:
+                print(f"Skipping invalid filename: {filename}")
+                continue
 
             for chunk in chunks:
                 out_file = os.path.join(
